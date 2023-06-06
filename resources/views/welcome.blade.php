@@ -22,13 +22,68 @@
             justify-content: right;
             align-items: center;
         }
+
+        .header {
+            top: 0;
+            width: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fe9ff5;
+            height: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+        .w-280 {
+            width: 350px !important;
+        }
+
+        .sidebar-display {
+            display: block !important;
+        }
+        .sidebar {
+            display: none;
+            height: 100vh;
+            width: 0;
+            position: fixed;
+            background-color: #fe9ff5;
+            z-index: 9999;
+        }
+
+        .w-280, .sidebar {
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition: all 1s;
+        }
+
+
     </style>
 </head>
-<body>
+<body class="position-relative">
+    <div class="sidebar flex-column align-items-center" id="sidebar">
+        <div>
+            <img src="{{ asset('/assets/logo-permencui.png') }}" height="80" alt="logo-permencui">
+        </div>
+    </div>
+
 
 <div class="" style="">
     <div class="row w-100 ms-0 justify-content-center">
         <div class="col-lg-5 col-md-6 col-xs-12 p-0 position-relative">
+            <div class="header w-100">
+                <a href="#" class="" style="border: none;">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 36px; color: white"></i>
+                </a>
+                <div>
+                    <img src="{{ asset('/assets/logo-permencui.png') }}" height="80" alt="logo-permencui">
+                </div>
+                <a href="#" id="btn-menu">
+                    <i class="fa-sharp fa-solid fa-bars" style="font-size: 36px; color: white"></i>
+                </a>
+            </div>
             <div id="page_1">
                 <img src="{{ asset('/assets/page_1_landing_page.jpg') }}" alt="image 1" class="w-100">
             </div>
@@ -82,8 +137,23 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 <script>
+
     $(document).ready(function () {
         $('.carousel').carousel();
+        $('#btn-menu').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $('#sidebar').toggleClass('w-280')
+            $('#sidebar').toggleClass('d-block')
+        })
+        $(document).on('click', function () {
+            if ($('#sidebar').hasClass('w-280')) {
+                $('#sidebar').toggleClass('w-280');
+                // $('#sidebar-parent').toggleClass('d-none');
+                $('#sidebar').toggleClass('d-block')
+                console.log('has class')
+            }
+        })
     })
 </script>
 </body>
