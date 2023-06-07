@@ -56,12 +56,10 @@
         }
 
         .sidebar {
-            /*display: none;*/
             width: 350px !important;
             height: 100vh;
-            /*width: 0;*/
-            position: absolute;
-            left: 0;
+            position: fixed;
+            left: -350px;
             background-color: #fe9ff5;
             z-index: 9999;
         }
@@ -75,32 +73,81 @@
 
         .sidebar-menu {
             list-style-type: none;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            cursor: pointer;
         }
+
         .sidebar-item {
             height: 50px;
-            transition: all ease-in-out .5s;
+            border-radius: 10px;
+            padding: 0 1rem;
+            transition: all ease-in-out .3s;
+        }
+
+        .sidebar-item > a {
+            text-decoration: none;
+            color: #005b60;
+            height: 50px;
+            display: flex;
+            align-items: center;
         }
 
         .sidebar-item:hover {
-            background-color: blueviolet;
+            background-color: #CB7FC4;
+        }
+
+        .social-panel {
+            padding-left: 2rem;
+            padding-right: 1rem;
+            font-size: 18px;
+            color: #005b60;
+        }
+
+        .social-panel > a {
+            text-decoration: none;
+            color: #005b60;
+            transition: all ease-in-out .3s;
+        }
+        .social-panel > a:hover {
+            color: #002e30;
         }
     </style>
 </head>
 <body class="position-relative">
-<div class="sidebar d-flex flex-column justify-content-center position-absolute" id="sidebar">
+<div class="sidebar d-flex flex-column justify-content-center" id="sidebar">
     <div class="w-100 text-center">
         <img src="{{ asset('/assets/logo-permencui.png') }}" height="150" alt="logo-permencui">
     </div>
     <div>
         <ul class="sidebar-menu">
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#" class="">
+                <a href="#page_2" class="w-100">
                     Tentang Permencui
                 </a>
             </li>
-            <li>Menu Permencui</li>
-            <li>Simulasi Penjualan</li>
+            <li class="sidebar-item d-flex align-items-center">
+                <a href="#" class="w-100">
+                    Menu Permencui
+                </a>
+            </li>
+            <li class="sidebar-item d-flex align-items-center">
+                <a href="#" class="w-100">
+                    Simulasi Penjualan
+                </a>
+            </li>
         </ul>
+    </div>
+    <div class="d-flex align-items-center social-panel">
+        <a href="#" class="me-3">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="me-3">
+            <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
     </div>
 </div>
 
