@@ -29,7 +29,7 @@
             bottom: 0;
             width: inherit;
             display: flex;
-            justify-content: right;
+            justify-content: center;
             align-items: center;
         }
 
@@ -79,7 +79,7 @@
         }
 
         .sidebar-item {
-            height: 50px;
+            height: 40px;
             border-radius: 10px;
             padding: 0 1rem;
             transition: all ease-in-out .3s;
@@ -88,7 +88,7 @@
         .sidebar-item > a {
             text-decoration: none;
             color: #005b60;
-            height: 50px;
+            height: inherit;
             display: flex;
             align-items: center;
         }
@@ -122,17 +122,17 @@
     <div>
         <ul class="sidebar-menu">
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#page_2" class="w-100">
+                <a href="#page_1" class="w-100 link-item">
                     Tentang Permencui
                 </a>
             </li>
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#" class="w-100">
+                <a href="page_2" class="w-100 link-item">
                     Menu Permencui
                 </a>
             </li>
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#" class="w-100">
+                <a href="#" class="w-100 link-item">
                     Simulasi Penjualan
                 </a>
             </li>
@@ -148,6 +148,9 @@
         <a href="#">
             <i class="fa-brands fa-youtube"></i>
         </a>
+    </div>
+    <div class="reserved mt-2 social-panel" style="font-size: 6px;">
+        All Rights Reserved © 2023 | Es Permencui | Guide | Terms and Condition | Privacy Policy
     </div>
 </div>
 
@@ -201,9 +204,10 @@
 
             {{--                </div>--}}
             <div class="footer pt-3 pb-3">
-                <div class="me-3" style="border-radius: 50%">
-                    <a href="#" class="btn btn-success" style="border: none;">
-                        <i class="fa-brands fa-whatsapp" style="font-size: 36px;"></i>
+                <div class="me-3">
+                    <a href="#" class="btn btn-success d-flex align-items-center" style="font-size: 14px">
+                        <i class="fa-brands fa-whatsapp me-2"></i>
+                        <span>Hubungi untuk kemitraan</span>
                     </a>
                 </div>
             </div>
@@ -226,7 +230,11 @@
             e.preventDefault();
             e.stopPropagation();
             $('#sidebar').toggleClass('w-280')
-        })
+        });
+
+        $('.link-item').on('click', function (e) {
+            e.stopPropagation();
+        });
         $(document).on('click', function () {
             if ($('#sidebar').hasClass('w-280')) {
                 $('#sidebar').toggleClass('w-280');
