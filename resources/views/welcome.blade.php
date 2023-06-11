@@ -127,12 +127,12 @@
                 </a>
             </li>
             <li class="sidebar-item d-flex align-items-center">
-                <a href="page_2" class="w-100 link-item">
+                <a href="#page_2" class="w-100 link-item">
                     Menu Permencui
                 </a>
             </li>
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#" class="w-100 link-item">
+                <a href="#page_3" class="w-100 link-item">
                     Simulasi Penjualan
                 </a>
             </li>
@@ -159,7 +159,7 @@
     <div class="row w-100 ms-0 justify-content-center">
         <div class="col-lg-5 col-md-6 col-xs-12 p-0 position-relative">
             <div class="header w-100">
-                <a href="#" class="" style="border: none;">
+                <a href="#" class="btn-whatsapp" style="border: none;">
                     <i class="fa-brands fa-whatsapp" style="font-size: 36px; color: white"></i>
                 </a>
                 <div>
@@ -205,7 +205,7 @@
             {{--                </div>--}}
             <div class="footer pt-3 pb-3">
                 <div class="me-3">
-                    <a href="#" class="btn btn-success d-flex align-items-center" style="font-size: 14px">
+                    <a href="#" class="btn btn-success d-flex align-items-center btn-whatsapp" id="btn-whatsapp" style="font-size: 14px">
                         <i class="fa-brands fa-whatsapp me-2"></i>
                         <span>Hubungi untuk kemitraan</span>
                     </a>
@@ -234,6 +234,15 @@
 
         $('.link-item').on('click', function (e) {
             e.stopPropagation();
+        });
+
+        $('.btn-whatsapp').on('click', function (e) {
+            e.preventDefault();
+            let whatsapp = '+6285728400663';
+            let message = 'Halo kak, Saya berminat jadi mitra Es Permencui. Apakah masih ada harga promonya, Kak?';
+            let urlWhatsapp = 'https://wa.me/' + whatsapp + '?text=' + message;
+            var win = window.open(urlWhatsapp, '_blank');
+            win.focus();
         });
         $(document).on('click', function () {
             if ($('#sidebar').hasClass('w-280')) {
