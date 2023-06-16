@@ -65,10 +65,10 @@
         }
 
         .w-280, .sidebar {
-            transition: all 1s;
-            -moz-transition: all 1s;
-            -webkit-transition: all 1s;
-            -o-transition: all 1s;
+            transition: all .5s;
+            -moz-transition: all .5s;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
         }
 
         .sidebar-menu {
@@ -122,17 +122,17 @@
     <div>
         <ul class="sidebar-menu">
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#page_1" class="w-100 link-item">
+                <a href="#page_2" class="w-100 link-item">
                     Tentang Permencui
                 </a>
             </li>
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#page_2" class="w-100 link-item">
+                <a href="#page_3" class="w-100 link-item">
                     Menu Permencui
                 </a>
             </li>
             <li class="sidebar-item d-flex align-items-center">
-                <a href="#page_3" class="w-100 link-item">
+                <a href="#page_5" class="w-100 link-item">
                     Simulasi Penjualan
                 </a>
             </li>
@@ -158,7 +158,7 @@
 <div class="" style="">
     <div class="row w-100 ms-0 justify-content-center">
         <div class="col-lg-5 col-md-6 col-xs-12 p-0 position-relative">
-            <div class="header w-100">
+            <div class="header w-100 sticky-top">
                 <a href="#" class="btn-whatsapp" style="border: none;">
                     <i class="fa-brands fa-whatsapp" style="font-size: 36px; color: white"></i>
                 </a>
@@ -190,19 +190,31 @@
             <div id="page_7">
                 <img src="{{ asset('/assets/testimoni_mitra.jpg') }}" alt="image 3" class="w-100">
             </div>
-            {{--                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">--}}
-            {{--                    <div class="carousel-inner">--}}
-            {{--                        <div class="carousel-item active">--}}
-            {{--                            <img src="{{ asset('/assets/page_2_landing_page.jpg') }}" class="d-block w-100" alt="...">--}}
-            {{--                        </div>--}}
-            {{--                        <div class="carousel-item">--}}
-            {{--                            <img src="{{ asset('/assets/page_1_landing_page.jpg') }}" class="d-block w-100" alt="...">--}}
-            {{--                        </div>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--                <div class="w-100 d-flex justify-content-end mb-0" style="top: auto; right: 0; position: sticky">--}}
-
-            {{--                </div>--}}
+            <div id="page_8">
+                <img src="{{ asset('/assets/page_8_landing_page.jpg') }}" alt="image 3" class="w-100">
+            </div>
+            <div id="page_9">
+                <img src="{{ asset('/assets/page_9_landing_page.jpg') }}" alt="image 3" class="w-100">
+            </div>
+            <div id="page_10">
+                <img src="{{ asset('/assets/page_10_landing_page.jpg') }}" alt="image 3" class="w-100">
+            </div>
+            <div id="page_11">
+                <img src="{{ asset('/assets/page_11_landing_page.jpg') }}" alt="image 3" class="w-100">
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('/assets/slide_show_1.jpeg') }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('/assets/slide_show_2.JPG') }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('/assets/slide_show_3.JPG') }}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
             <div class="footer pt-3 pb-3">
                 <div class="me-3">
                     <a href="#" class="btn btn-success d-flex align-items-center btn-whatsapp" id="btn-whatsapp" style="font-size: 14px">
@@ -233,7 +245,7 @@
         });
 
         $('.link-item').on('click', function (e) {
-            e.stopPropagation();
+            // e.stopPropagation();
         });
 
         $('.btn-whatsapp').on('click', function (e) {
