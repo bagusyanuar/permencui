@@ -143,15 +143,15 @@
         </ul>
     </div>
     <div class="d-flex align-items-center social-panel">
-        <a href="#" class="me-3">
+        <a href="https://instagram.com/permencui?igshid=MzRlODBiNWFlZA==" target="_blank" class="me-3">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="#" class="me-3">
-            <i class="fa-brands fa-square-facebook"></i>
-        </a>
-        <a href="#">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
+{{--        <a href="#" class="me-3">--}}
+{{--            <i class="fa-brands fa-square-facebook"></i>--}}
+{{--        </a>--}}
+{{--        <a href="#">--}}
+{{--            <i class="fa-brands fa-youtube"></i>--}}
+{{--        </a>--}}
     </div>
     <div class="reserved mt-2 social-panel" style="font-size: 6px;">
         All Rights Reserved © 2023 | Es Permencui | Guide | Terms and Condition | Privacy Policy
@@ -277,8 +277,8 @@
 
         $('.btn-whatsapp').on('click', function (e) {
             e.preventDefault();
-            let whatsapp = '+6285728400663';
-            let message = 'Halo kak, Saya berminat jadi mitra Es Permencui. Apakah masih ada harga promonya, Kak?';
+            let whatsapp = '6285643026799';
+            let message = 'Halo, saya berminat jadi mitra permencui';
             let urlWhatsapp = 'https://wa.me/' + whatsapp + '?text=' + message;
             var win = window.open(urlWhatsapp, '_blank');
             win.focus();
