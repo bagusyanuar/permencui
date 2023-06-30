@@ -146,6 +146,9 @@
         <a href="https://instagram.com/permencui?igshid=MzRlODBiNWFlZA==" target="_blank" class="me-3">
             <i class="fa-brands fa-instagram"></i>
         </a>
+        <a href="https://goo.gl/maps/bML8J8cabbwX8LDQ8" target="_blank" class="me-3">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </a>
 {{--        <a href="#" class="me-3">--}}
 {{--            <i class="fa-brands fa-square-facebook"></i>--}}
 {{--        </a>--}}
@@ -241,7 +244,9 @@
             <div id="page_11">
                 <img src="{{ asset('/assets/page_11_landing_page.jpg') }}" alt="image 3" class="w-100">
             </div>
-
+            <div>
+                <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15820.222906957175!2d110.78437379323732!3d-7.568903851503825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15fbb5d409db%3A0x2d49746587ee030e!2sPermencui!5e0!3m2!1sid!2sid!4v1688099544796!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div class="footer pt-3 pb-3">
                 <div class="me-3">
                     <a href="#" class="btn btn-success d-flex align-items-center btn-whatsapp" id="btn-whatsapp" style="font-size: 14px">
